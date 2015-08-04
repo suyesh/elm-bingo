@@ -26,6 +26,8 @@ pageFooter =
     ]
 
 
+
+
 view =
   div [ id "container" ] [ pageHeader, pageFooter ]
 
