@@ -292,7 +292,7 @@ Elm.Bingo.make = function (_elm) {
    var pageFooter = A2($Html.footer,
    _L.fromArray([]),
    _L.fromArray([A2($Html.a,
-   _L.fromArray([$Html$Attributes.href("https://suyesh.com")]),
+   _L.fromArray([$Html$Attributes.href("https://www.suyesh.com")]),
    _L.fromArray([$Html.text("Suyesh.com")]))]));
    var title = F2(function (message,
    times) {
@@ -303,7 +303,7 @@ Elm.Bingo.make = function (_elm) {
    var pageHeader = A2($Html.h1,
    _L.fromArray([]),
    _L.fromArray([A2(title,
-   "Bingo!",
+   "bingo!",
    3)]));
    var view = A2($Html.div,
    _L.fromArray([$Html$Attributes.id("container")]),
