@@ -1,7 +1,9 @@
 module Bingo where
 
-import Html
-import String
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
+import String exposing (toUpper, repeat, trimRight)
 --This is a single line comment
 {-
 'Twas in a shady Avenue,
@@ -16,10 +18,21 @@ Credit: Thomas Hood's poem "The Elm Tree"
 -}
 title message times =
   message ++ " "
-  |> String.toUpper
-  |> String.repeat times
-  |> String.trimRight
-  |> Html.text
+  |> toUpper
+  |> repeat times
+  |> trimRight
+  |> text
+
+pageHeader =
+  h1 [] [title "Bingo!" 3]
+
+pageFooter =
+  footer []
+    [a [href "https://suyesh.com"]
+       [ text "Suyesh.com"]
+    ]
+view =
+  div [id "container"] [pageHeader, pageFooter]
 
 main =
-  title "Hello World!!" 3
+  view
